@@ -6,7 +6,7 @@ output "workspace_id" {
 
 output "workspace_customer_id" {
   description = "The workspace (customer) ID of this Log Analytics workspace."
-  value       = module.log_analytics.workspace_id.workspace_customer_id
+  value       = module.log_analytics.workspace_customer_id
   sensitive   = true
 }
 
