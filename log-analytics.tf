@@ -31,11 +31,6 @@ resource "azurerm_monitor_diagnostic_setting" "diagnostic_settings" {
     content {
       category = metric.key
       enabled  = metric.value.enabled
-
-      retention_policy {
-        days    = metric.value.retention_days
-        enabled = metric.value.retention_enabled
-      }
     }
   }
 }

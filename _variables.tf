@@ -1,13 +1,13 @@
 variable "workspace_name" {
   description = "The name of this Log Analytics workspace."
   type        = string
-  default     = "workspacename"
+  default     = "non-prod"
 }
 
 variable "resource_group_name" {
   description = "The name of the resource group to create the resources in."
   type        = string
-  default     = "rgname"
+  default     = "Ashwita"
 }
 
 variable "location" {
