@@ -33,6 +33,9 @@ resource "azurerm_monitor_diagnostic_setting" "diagnostic_settings" {
       enabled  = metric.value.enabled
     }
   }
+
+    storage_account_id = "subscriptions/75223151-1800-43db-a8f3-b7fe605d3385/resourceGroups/gaurav/providers/Microsoft.Storage/storageAccounts/terraformteststacc01"
+
 }
 
 resource "azurerm_storage_management_policy" "example" {
