@@ -34,12 +34,11 @@ resource "azurerm_monitor_diagnostic_setting" "diagnostic_settings" {
     }
   }
 
-    storage_account_id = "subscriptions/75223151-1800-43db-a8f3-b7fe605d3385/resourceGroups/gaurav/providers/Microsoft.Storage/storageAccounts/terraformteststacc01"
-
+    storage_account_id = var.storage_account_id
 }
 
 resource "azurerm_storage_management_policy" "example" {
-  storage_account_id = "subscriptions/75223151-1800-43db-a8f3-b7fe605d3385/resourceGroups/gaurav/providers/Microsoft.Storage/storageAccounts/terraformteststacc01"
+    storage_account_id = var.storage_account_id
   // storage_account_id = azurerm_storage_account.example.id
   rule {
     name    = "rule1"
