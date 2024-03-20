@@ -1,13 +1,13 @@
 variable "workspace_name" {
   description = "The name of this Log Analytics workspace."
   type        = string
-  default     = "non-prod"
+  default     = ""
 }
 
 variable "resource_group_name" {
   description = "The name of the resource group to create the resources in."
   type        = string
-  default     = "Ashwita"
+  default     = ""
 }
 
 variable "location" {
@@ -23,6 +23,7 @@ variable "sku" {
 }
 
 variable "storage_account_id" {
+  description = "The ID of the Azure Storage account where diagnostic logs will be stored."
   type = string
   default = "subscriptions/75223151-1800-43db-a8f3-b7fe605d3385/resourceGroups/Ashwita/providers/Microsoft.Storage/storageAccounts/testinglogdiagnostic"
 }
